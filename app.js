@@ -7,12 +7,11 @@ function adicionarAmigo() {
     if (nome == '') {
         alert('Por favor, insira um nome.');
     } else {
-        console.log(nome);
+        //console.log(nome);
         listaNomes.push(nome);
         document.getElementById('amigo').value = ''
         mostrarLista();
     }
-
 }
 
 function mostrarLista() {
@@ -28,12 +27,8 @@ function sortearAmigo() {
         alert('Nenhum amigo adicionado.');
     } else {
         let indice = Math.floor(Math.random() * listaNomes.length);
-        console.log(indice);
+        //console.log(indice);
         let sorteado = listaNomes[indice];
         document.getElementById('resultado').innerHTML = '<li>' + sorteado + '</li>';
     }
-    /*let sorteado = listaNomes[Math.floor(Math.random() * listaNomes.length)];
-    alert('Você escolheu'+ sorteado);
-    listaNomes = listaNomes.filter(nome => nome!== sorteado);
-    mostrarLista();*/
 }
